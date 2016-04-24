@@ -38,6 +38,6 @@ gem 'sass-rails', '~> 5.0'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
+gem 'devise'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin]

@@ -15,10 +15,7 @@
     <%= f.label :title %><br>
     <%= f.text_field :title %>
   </div>
-  <div class="field">
-    <%= f.label :author %><br>
-    <%= f.text_field :author %>
-  </div>
+  
   <div class="field">
     <%= f.label :blog_entry %><br>
     <%= f.text_area :blog_entry %>
@@ -26,4 +23,6 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+
+  <%= f.hidden_field :user_id, value: current_user %>
 <% end %>

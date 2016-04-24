@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
-  resources :comments
+  devise_for :users
 
+  root 'welcome#index'
+  resources :comments
   resources :blog_posts
 
+  get 'your_posts' => 'blog_posts#your_posts'
+  get 'contact-us' => 'welcome#contact_us'
+  get 'user_posts/:id' => 'blog_posts#user_posts'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -41,7 +46,7 @@ Rails.application.routes.draw do
   #     resources :comments
   #     resources :sales do
   #       get 'recent', on: :collection
-  #     end
+  #     ends
   #   end
 
   # Example resource route with concerns:
